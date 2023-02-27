@@ -1,0 +1,77 @@
+{% extends 'base.html' %} {% block title %}Signup{% endblock title %} 
+{% block  body %}
+
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-7">
+
+<div class="card bg-light p-5 justify-content-center">
+  <h3 class="text-dark">Signup</h3>
+  <form action="" method="post">
+    {% csrf_token %}
+    <br />
+       <label for="email">User Name</label>
+
+    <div class="from-group">
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        name="username"
+        required/>
+      </div>
+
+    <label for="email">Email</label>
+
+    <div class="from-group">
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        required/>
+    </div>
+    <label for="pass1">Password</label>
+    <div class="from-group">
+      <input
+        type="password"
+        class="form-control"
+        id="pass1"
+        name="pass1"
+        required
+      />
+    </div>
+    <label class="pass2">Conform Password</label>
+    <div class="from-group">
+      <input type="password" class="form-control" id="pass2" name="pass2"required />
+    </div>
+
+     <div class="form-group">
+								<label class="city">City</label>
+								<input type="text" id= "name" name ="name" class="form-control" placeholder="Enter your City Name" required>
+			</div>
+
+      <div class="form-group">
+								<label class="state">State name</label>
+								<input type="name" id= "name" name ="name" class="form-control" placeholder="Enter Your state Name" required>
+		</div>
+
+    <div class="form-group">
+								<label class="pincode">Pin Code</label>
+								<input type="number" id= "number" name ="pincode" class="form-control" placeholder="Enter Your Pin Code " required>
+		</div>
+
+    <br />
+
+    <button type="submit" class="btn btn-primary">SignIn</button>
+    <br />
+    Already User?<a href="{% url 'login' %}">Login</a>
+    <br />
+  </form>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock body %}
